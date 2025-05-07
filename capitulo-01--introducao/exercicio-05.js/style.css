@@ -1,0 +1,129 @@
+/*
+    ------------
+    Reset Global
+    ------------
+*/
+
+* {
+ margin: 0;  
+ padding: 0;  
+ box-sizing: border-box;  
+ font-size: 16px;  
+}
+
+/*
+   -----------------
+   Variáveis Globais
+   -----------------
+*/
+
+:root {
+ --dark-color: #A66F89;  /* Cor escura (usada em fundo ou texto) */
+ --medium-color: #A65858;  /* Cor intermediária (usada em botões, destaques) */
+ --light-color:#D6D0D9;  /* Cor clara (usada em fundos ou para destacar) */
+ 
+ --font--bold: bold;  /* Definição de peso de fonte em negrito */
+ --border-radius: 5px;  /* Arredondamento das bordas */
+ --border-none: none;  /* Remoção da borda */
+}
+
+/*
+   ------------------
+   Layout e Estrutura
+   ------------------
+*/
+
+.main {
+ display: flex;  
+ align-items: center;  
+ justify-content: center;  
+ width: 100vw;  
+ height: 100vh;  
+ margin: auto;  
+}
+
+/*
+   ----------
+   Formulário
+   ----------
+*/
+
+.card {
+ background-color: var(--light-color);  
+ border-radius: var(--border-radius);  
+ display: flex;  
+ flex-direction: column; 
+ align-self: center;  
+ justify-content: center;  
+ gap: 10px;   
+ width: 100%;  
+ padding: 10px 20px;  
+ margin: 10px 0 0 0; 
+ text-align: center;
+}
+
+#card-footer {
+   display: none;
+   opacity: 0;
+   transition: opacity 0.5s ease-in-out;
+}
+ 
+#card-footer.visible {
+   display: block;
+   opacity: 1;
+}
+
+.label{
+   font-weight: bold;
+   text-align: left;
+}
+
+.input {
+ border: var(--border-none);  
+ border-radius: var(--border-radius); 
+ padding: 10px;  
+}
+
+.input::placeholder {
+ font-weight: var(--font--bold);  
+}
+
+/*
+   -----------------
+   Estilo dos Botões
+   -----------------
+*/
+
+.btn {
+ background-color: var(--medium-color); 
+ border: var(--border-none);  
+ padding: 10px;
+ color: white;  
+ border-radius: var(--border-radius);  
+ font-weight: var(--font--bold); 
+ transition: 1s all;  
+}
+
+/* Efeito de hover no botão */
+.btn:hover {
+ background-color: var(--dark-color);  
+}
+/*
+   ------------------
+   Estilo da Resposta
+   ------------------
+*/
+
+.outputResult {
+ font-weight: var(--font--bold);  
+ padding: 10px;  
+ border-radius: var(--border-radius);  
+ max-width: 100%;  
+}
+
+#output {
+ padding: 10px;  
+ border-radius: 5px;  
+ transition: background-color 0.3s ease; 
+}
+

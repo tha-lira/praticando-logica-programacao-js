@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programa</title>
+  <link rel="stylesheet" href="style.css"> <!-- Link para o arquivo CSS -->
+</head>
+<body>
+
+  <!--
+    Exemplo 1.9 - programa para uma pizzaria
+    
+    Elaborar um programa para uma pizzaria,
+    qual leia o valor total de uma conta e
+    quantos clientes vão paga-lá
+  -->
+    
+  <main class="main"> <!-- Container principal que centraliza o conteúdo -->
+    <div class="content"> 
+
+      <!-- Formulário que recebe o número e possui os botões -->
+      <form action="" id="form" class="card-header card">
+        <!-- Campo de entrada para o número -->
+         <label for="idNum1" class="label">Digite o valor da pizza:</label>
+        <input type="number" name=""  class="input" id="idNum1" placeholder="R$">
+        
+        <!-- Campo de entrada para o número -->
+        <label for="idNum2" class="label">A conta será paga por quantas pessoas?</label>
+        <input type="number" name=""  class="input" id="idNum2">
+        
+        <!-- Botão para enviar o número e calcula a taxa-->
+         
+        <input type="button" value="Enviar" id="submitBtn" class="btn">
+            
+        <!-- Botão para limpar o campo de entrada e o resultado -->
+        <input type="button" value="Limpar" id="clearBtn" class="btn">
+      </form>
+
+      <!-- Caixa de resultado que exibirá o dobro do número ou a mensagem de erro -->
+      <div class="card-footer card" id="card-footer">
+        <p id="output" class="outputResult"></p> <!-- Aqui será exibido o resultado -->
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Link para o arquivo de script JavaScript que irá manipular a lógica da aplicação -->
+  <script src="script.js"></script>
+</body>
+</html>
