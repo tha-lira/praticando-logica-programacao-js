@@ -1,52 +1,44 @@
 /*--- Reset ---*/
-
-*{
+* {
  box-sizing: border-box;
  margin: 0;
  padding: 0;
- font-family: Arial, Helvetica, sans-serif;
+ font-family: Arial, sans-serif;
 }
 
 /*--- Variáveis ---*/
-
-:root{
+:root {
  --primary-color: #4A2F14;
- --secondary-color:#B5935A;
- --light-color:#E6CF98;
+ --secondary-color: #B5935A;
+ --light-color: #E6CF98;
  --transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
 }
 
 /*--- Estrutura Principal ---*/
-
-.conteudo-principal{
+.conteudo-principal {
  display: flex;
- flex-flow: column;/*flex-direction:; flex-wrap:;*/
+ flex-direction: column;
  gap: 10px;
 }
 
 body {
- background-color:var(--secondary-color) ;
+ background-color: var(--secondary-color);
  width: 100vw;
  min-height: 100vh;
  display: flex;
- flex-flow: column;/*flex-direction:; flex-wrap:;*/
- justify-content:space-between;
+ flex-direction: column;
+ justify-content: space-between;
  align-items: center;
- gap: 20px;  
+ gap: 20px;
 }
 
-/*--- Titulo da página ---*/
-
-.titulo-principal{
+/*--- Título da página ---*/
+.titulo-principal {
  margin: 30px 0 0 0;
- color: var(--primary-color);
- letter-spacing: 2px;
- text-align: center;
 }
 
 /*--- Formulário ---*/
-
-.formulario, .saida-formulario { /*Box entrada e saida de dados*/
+.formulario, .saida-formulario {
  max-width: 500px;
  margin: 0 auto;
  background-color: var(--light-color);
@@ -71,7 +63,7 @@ fieldset.grupo-campos {
 
 .campo-formulario {
  display: flex;
- flex-flow: column;/*flex-direction:; flex-wrap:;*/
+ flex-direction: column;
  margin-bottom: 15px;
 }
 
@@ -94,20 +86,18 @@ fieldset.grupo-campos {
  box-shadow: 0 0 3px var(--primary-color);
 }
 
-/*--- Campo de saida ---*/
-
-#resposta-formulario{
- display: none; /*Ativado no js*/
+/*--- Campo de saída ---*/
+#resposta-formulario {
+ display: none; /* Ativado no JS */
 }
 
-.mensagem-envio{
+.mensagem-envio {
  font-weight: bold;
  color: var(--primary-color);
 }
 
 /* --- Botões ---*/
-
-.grupo-botoes{
+.grupo-botoes {
  display: flex;
  gap: 10px;
 }
@@ -118,35 +108,27 @@ fieldset.grupo-campos {
  border: none;
  border-radius: 4px;
  cursor: pointer;
- background-color:  var(--primary-color);
+ background-color: var(--primary-color);
  color: white;
- transition: var(--transition)
+ transition: var(--transition);
 }
 
-.botao-enviar:hover,.botao-limpar:hover {
+.botao-enviar:hover, .botao-limpar:hover {
  background-color: #36220e;
- /* leve aumento visual no foco */
  transform: scale(1.01); 
 }
 
 /*--- Rodapé ---*/
-
 .rodape {
  background-color: var(--primary-color);
- color: white;
+ width: 100%;
+ color: var(--light-color);
  padding: 10px;
  text-align: center;
- font-size: 1.2rem;
- width: 100%;
 }
 
-@media(min-width:1024px){
- /*--- Formulário ---*/
- .formulario, .saida-formulario { /*Box entrada e saida de dados*/
+@media(min-width: 1024px) {
+ .formulario, .saida-formulario {
   min-width: 500px;
  }
-
- .conteudo-principal {
-  gap: 15px; 
-}
 }
