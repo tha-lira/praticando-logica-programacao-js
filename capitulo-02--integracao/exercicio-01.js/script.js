@@ -19,7 +19,7 @@ const  verificarDados = (event) => {
   entrada.style.border = "3px solid red";
   saidaformulario.style.display = 'block'
 
- } else{
+ } else{ 
   processarEnvio()
   entrada.style.border = "3px solid green";  
   saidaformulario.style.display = 'block'
