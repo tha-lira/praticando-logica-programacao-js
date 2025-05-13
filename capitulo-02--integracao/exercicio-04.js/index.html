@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR"> <!-- Define o idioma principal da página como português do Brasil -->
+<head>
+  <meta charset="UTF-8"> <!-- Suporte a caracteres especiais, como acentos -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsividade -->
+  <title>Restaurante JS</title> <!-- Título exibido na aba do navegador -->
+  <link rel="stylesheet" href="style.css"> <!-- Importa o arquivo de estilos -->
+</head>
+
+<body>
+  <!-- Cabeçalho da página -->
+  <header>
+    <h1 class="titulo-principal">Restaurante JS</h1> <!-- Título principal -->
+  </header>
+
+  <!-- Conteúdo principal da página -->
+  <main class="conteudo-principal">
+    
+    <!-- Formulário para entrada de dados -->
+    <form action="" class="formulario" id="form-contato">
+      
+      <!-- Agrupamento dos campos do formulário -->
+      <fieldset class="grupo-campos">
+        <legend class="titulo-campo">Dados do Consumo</legend> <!-- Título do grupo -->
+
+        <div class="campo-formulario">
+          <label for="nome" class="campo-label">Buffet por Quilo R$:</label>
+          <input 
+            type="number" 
+            id="idQuilo" 
+            name="nome" 
+            class="campo-input" 
+            placeholder="Ex: 59.90" 
+            required>
+        </div>
+
+        <div class="campo-formulario">
+          <label for="num" class="campo-label">Consumo por cliente:</label>
+          <input 
+            type="number" 
+            id="idConsumo" 
+            name="num" 
+            class="campo-input" 
+            placeholder="Ex: 0.350" 
+            required>
+        </div>
+      </fieldset>
+
+      <!-- Botões do formulário -->
+      <div class="campo-formulario grupo-botoes">
+        <button 
+          type="button" 
+          class="btn botao-enviar" 
+          id="btn-enviar">Enviar</button> <!-- Botão que aciona o JS -->
+
+        <button 
+          type="reset" 
+          class="btn botao-limpar" 
+          id="btn-limpar">Limpar</button> <!-- Botão que limpa o formulário -->
+      </div>
+    </form>
+
+    <!-- Área onde a resposta do JS será exibida -->
+    <div class="saida-formulario" id="resposta-formulario">
+      <p class="mensagem-envio"></p> <!-- Parágrafo onde será exibida a mensagem de sucesso ou erro -->
+    </div>
+  </main>
+
+  <!-- Rodapé da página -->
+  <footer class="rodape">
+    <p class="texto-rodape">2025</p> <!-- Ano no rodapé -->
+  </footer>
+
+  <!-- Importa o script JS que manipula o formulário -->
+  <script src="script.js"></script>
+</body>
+</html>
