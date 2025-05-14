@@ -21,7 +21,7 @@ const validarDados = (precoQuilo, valorConsumido) => {
 };
 
 const processarEnvio = (precoQuilo, valorConsumido) => {
-  const saldo = precoQuilo * valorConsumido; // CORRIGIDO: remover divisão por 1000
+  const saldo = precoQuilo * valorConsumido; 
   mensagem.innerText = `Total a pagar: R$ ${saldo.toFixed(2)}`;
   saidaformulario.style.display = 'block';
 };
