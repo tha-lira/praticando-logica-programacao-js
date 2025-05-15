@@ -1,0 +1,151 @@
+/*--- Reset ---*/
+* {
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+ font-family: Arial, Helvetica, sans-serif;
+}
+
+/*--- Variáveis Globais ---*/
+:root {
+ --primary-color: #164773;
+ --secondary-color:#9db1cc;
+ --light-color:#e1e9f3;
+ --transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+}
+
+/*--- Estrutura principal da página ---*/
+body {
+ background-color: var(--secondary-color);
+ width: 100vw;
+ min-height: 100vh;
+ display: flex;
+ flex-flow: column;
+ justify-content: space-between;
+ align-items: center;
+ gap: 20px;
+}
+
+.conteudo-principal {
+ display: flex;
+ flex-flow: column;
+ gap: 10px;
+}
+
+/*--- Título principal ---*/
+.titulo-principal {
+ margin: 30px 0 0 0;
+ color: var(--primary-color);
+ letter-spacing: 2px;
+ text-align: center;
+}
+
+/*--- Estilização do formulário e da saída de dados ---*/
+.formulario, .saida-formulario {
+ max-width: 500px;
+ margin: 0 auto;
+ background-color: var(--light-color);
+ padding: 20px;
+ border-radius: 8px;
+ box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Agrupamento dos campos (fieldset) */
+fieldset.grupo-campos {
+ border: 2px solid var(--primary-color);
+ border-radius: 6px;
+ padding: 5px;
+ margin-bottom: 20px;
+}
+
+/* Título do fieldset */
+.titulo-campo {
+ font-size: 1.2rem;
+ font-weight: bold;
+ color: var(--primary-color);
+ padding: 0 10px;
+}
+
+/* Cada campo do formulário */
+.campo-formulario {
+ display: flex;
+ flex-flow: column;
+ margin-bottom: 15px;
+}
+
+/* Rótulo do campo */
+.campo-label {
+ margin-bottom: 5px;
+ font-weight: 500;
+ color: var(--primary-color);
+}
+
+/* Campos de entrada */
+.campo-input, .campo-textarea {
+ padding: 8px 10px;
+ border: 1px solid #ccc;
+ border-radius: 4px;
+ font-size: 1rem;
+}
+
+/* Estilo ao focar no campo */
+.campo-input:focus {
+ border-color: var(--primary-color);
+ outline: none;
+ box-shadow: 0 0 3px var(--primary-color);
+}
+
+/*--- Área de saída de dados (oculta por padrão) ---*/
+#resposta-formulario {
+ display: none; /* Mostrado via JavaScript */
+}
+
+.mensagem-envio {
+ font-weight: bold;
+ color: var(--primary-color);
+}
+
+/*--- Grupo de botões ---*/
+.grupo-botoes {
+ display: flex;
+ gap: 10px;
+}
+
+/* Estilo base dos botões */
+.btn {
+ padding: 10px 20px;
+ font-size: 1rem;
+ border: none;
+ border-radius: 4px;
+ cursor: pointer;
+ background-color: var(--primary-color);
+ color: white;
+ transition: var(--transition);
+}
+
+/* Efeito hover nos botões */
+.botao-enviar:hover, .botao-limpar:hover {
+ background-color:  #0B2B40;
+ transform: scale(1.01); /* Efeito leve de zoom ao passar o mouse */
+}
+
+/*--- Rodapé ---*/
+.rodape {
+ background-color: var(--primary-color);
+ color: white;
+ padding: 10px;
+ text-align: center;
+ font-size: 1.2rem;
+ width: 100%;
+}
+
+/*--- Responsividade para telas maiores ---*/
+@media(min-width: 1024px) {
+ .formulario, .saida-formulario {
+   min-width: 500px; /* Garante largura mínima confortável */
+ }
+
+ .conteudo-principal {
+   gap: 15px;
+ }
+}
